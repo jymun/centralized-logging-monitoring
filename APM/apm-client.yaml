@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: devopskr/tomcat:latest
+        image: devopskr/apm-demo:latest
         imagePullPolicy: Always
         resources:
           requests:
@@ -28,7 +28,7 @@ spec:
           name: frontend-port
         readinessProbe:
           httpGet:
-            path: /		  
+            path: /test/hello		  
             port: 8080
           initialDelaySeconds: 5
           periodSeconds: 10
