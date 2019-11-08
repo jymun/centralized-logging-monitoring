@@ -45,10 +45,9 @@ spec:
   - port: 8200
     targetPort: 8200
     name: http
-    nodePort: 31000
   selector:
     app: apm-server
-  type: NodePort
+  type: ClusterIP 
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
